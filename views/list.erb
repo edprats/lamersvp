@@ -1,13 +1,43 @@
+<<<<<<< HEAD
+<table cellpadding="20">
+  <tr>
+    <th>Name</th>
+    <th></th>
+=======
 <table>
   <tr>
     <th>Name</th>
+>>>>>>> master
     <th>Org</th>
   </tr>
   <% @rsvps.keys.each do |rsvp| %>
     <tr>
+<<<<<<< HEAD
+      <% if ( @rsvps[rsvp]['name'] ) && rsvp !~ /waiting/i %>
+	<td align='left'><%= @rsvps[rsvp]['name'] %></td>
+	<td></td>
+	<td align='right'><%= @rsvps[rsvp]['org'] %></td>
+      <% elsif rsvp =~ /waiting/i %>
+	<td align='left'><%= @rsvps[rsvp]['name'] %></td>
+	<td> - waiting list - </td>
+	<td align='right'><%= @rsvps[rsvp]['org'] %></td>
+      <% elsif @rsvps[rsvp]['pies'] && @rsvps[rsvp]['email'] !~ /spire|js.la$/ %>
+	<td align='left'><%= @rsvps[rsvp]['pies'] %></td>
+	<td></td>
+	<td align='right'><%= @rsvps[rsvp]['org'] %></td>
+      <% else %>
+	<td align='left'>carlo and jason</td>
+	<td> - organizer placeholder - </td>
+	<td align='right'><%= @rsvps[rsvp]['org'] %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+=======
       <td><%= @rsvps[rsvp]['name'] %></td>
       <td><%= @rsvps[rsvp]['org'] %></td>
     </tr>
   <% end %>
 </table>
 
+>>>>>>> master
